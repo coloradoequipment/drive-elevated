@@ -1,21 +1,27 @@
 import Image from "next/image";
 import Link from "next/link";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import CTAButton from "./components/CTAButton";
 
 const vehicles = [
   {
     name: "Corvette Convertible",
     image: "/images/corvette.jpg",
     description: "Pure performance. Open-air freedom.",
+    href: "/vehicles/corvette",
   },
   {
     name: "BMW M4 Convertible",
     image: "/images/bmw-m4.jpg",
     description: "Precision. Power. Built to thrill.",
+    href: "/vehicles/bmw-m4",
   },
   {
     name: "Rivian R1S",
     image: "/images/rivian.jpg",
     description: "Adventure meets innovation. All-electric capability.",
+    href: "/vehicles/rivian",
   },
 ];
 
@@ -36,30 +42,11 @@ export default function Home() {
           <div className="absolute inset-0 bg-gradient-to-t from-[#020407] via-transparent to-[#020407]/35" />
         </div>
 
-        <nav className="relative z-10 flex items-start justify-between px-5 pt-5 md:px-16">
-          <div className="ml-4 max-w-[360px] md:ml-0">
-            <Image
-  src="/images/logo-transparent.png"
-  alt="Drive Elevated"
-  width={500}
-  height={150}
-  priority
-  className="h-auto"
- />
-            
-          </div>
+        <div className="relative z-10">
+          <Navbar />
+        </div>
 
-          <div className="hidden gap-10 pt-2 text-sm font-semibold uppercase tracking-[0.25em] text-white/85 md:flex">
-            <a className="border-b border-[#d6a85f] pb-2 text-[#d6a85f]" href="/">
-              Home
-            </a>
-            <a href="#vehicles">Vehicles</a>
-            <a href="#faq">FAQ</a>
-            <a href="#pickup">Pickup</a>
-          </div>
-        </nav>
-
-        <div className="relative z-10 flex min-h-[50vh] items-start pt-8 px-5 md:px-16">
+        <div className="relative z-10 flex min-h-[54vh] items-start px-6 pt-8 md:px-16">
           <div className="max-w-3xl">
             <p className="mb-5 text-sm uppercase tracking-[0.5em] text-[#d6a85f]">
               Curated Automotive Experiences
@@ -81,28 +68,20 @@ export default function Home() {
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <a
-                href="#vehicles"
-                className="rounded-full bg-[#d6a85f] px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-black"
-              >
-                View Vehicles →
-              </a>
-              <a
-                href="#faq"
-                className="rounded-full border border-white/30 px-8 py-4 text-sm font-bold uppercase tracking-[0.25em] text-white"
-              >
-                Guest FAQ
-              </a>
+              <CTAButton href="/#vehicles">View Vehicles →</CTAButton>
+             <CTAButton href="/guest-guide" variant="outline">
+    Guest Guide →
+</CTAButton>
             </div>
           </div>
         </div>
 
-        <section id="vehicles" className="relative z-10 px-8 pb-16 md:px-16">
+        <section id="vehicles" className="relative z-10 px-6 pb-16 md:px-16">
           <div className="mb-6 text-center">
             <p className="inline-flex items-center gap-6 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-              <span className="h-px w-24 bg-[#d6a85f]/70" />
+              <span className="h-px w-16 bg-[#d6a85f]/70 md:w-24" />
               Our Vehicles
-              <span className="h-px w-24 bg-[#d6a85f]/70" />
+              <span className="h-px w-16 bg-[#d6a85f]/70 md:w-24" />
             </p>
           </div>
 
@@ -130,19 +109,11 @@ export default function Home() {
                       {vehicle.description}
                     </p>
                     <Link
-href={
-  vehicle.name === "Corvette Convertible"
-    ? "/vehicles/corvette"
-    : vehicle.name === "BMW M4 Convertible"
-      ? "/vehicles/bmw-m4"
-      : vehicle.name === "Rivian R1S"
-        ? "/vehicles/rivian"
-        : "#"
-}
-  className="text-sm font-semibold uppercase tracking-[0.25em] text-[#d6a85f]"
->
-  View Guide →
-</Link>
+                      href={vehicle.href}
+                      className="text-sm font-semibold uppercase tracking-[0.25em] text-[#d6a85f]"
+                    >
+                      View Guide →
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -150,6 +121,8 @@ href={
           </div>
         </section>
       </section>
+
+      <Footer />
     </main>
   );
 }

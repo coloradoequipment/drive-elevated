@@ -1,108 +1,78 @@
-import Image from "next/image";
-import Link from "next/link";
+import Navbar from "../../components/Navbar";
+import Footer from "../../components/Footer";
+import PageHero from "../../components/PageHero";
+import InfoCard from "../../components/InfoCard";
+import CTAButton from "../../components/CTAButton";
+
+const turoHostLink = "https://turo.com/us/en/host/20782143";
 
 export default function BMWPage() {
   return (
     <main className="min-h-screen bg-[#020407] text-white">
-      <section className="relative overflow-hidden px-6 py-10 md:px-16">
-        <Link
-          href="/"
-          className="text-sm uppercase tracking-[0.25em] text-[#d6a85f]"
-        >
-          ← Drive Elevated
-        </Link>
+      <Navbar />
 
-        <div className="grid gap-12 py-12 md:grid-cols-2 md:items-start">
-          <div>
-            <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-              Vehicle Guide
-            </p>
-            <h1 className="mb-6 text-4xl font-bold uppercase leading-none md:text-6xl">
-              <>
-  BMW M4
-  <br />
-  Competition Convertible
-</>
-            </h1>
-            <p className="max-w-xl text-lg leading-8 text-white/75">
-              Quick answers for pickup, luggage, fuel, convertible operation,
-              and common guest questions before or during your trip.
-            </p>
-          </div>
-
-          <div className="relative h-[360px] overflow-hidden rounded-3xl border border-white/15">
-            <Image
-              src="/images/bmw-m4.jpg"
-              alt="BMW M4 Convertible"
-              fill
-              priority
-              sizes="(max-width: 768px) 100vw, 50vw"
-              className="object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent" />
-          </div>
-        </div>
-      </section>
+      <PageHero
+        eyebrow="Vehicle Guide"
+        title="BMW M4 Convertible"
+        subtitle="Everything you need for pickup, luggage, convertible operation, driving tips, fuel, and return."
+        image="/images/bmw-m4.jpg"
+      />
 
       <section className="grid gap-6 px-6 pb-16 md:grid-cols-3 md:px-16">
-        {[
-          {
-            title: "Fuel",
-            text: "Premium fuel only. Please return the vehicle with the same fuel level as pickup unless otherwise arranged through Turo.",
-          },
-          {
-            title: "Luggage",
-            text: "Best with soft bags or smaller carry-ons. Convertible storage is more limited when the top is down.",
-          },
-          {
-            title: "Convertible Top",
-            text: "Operate the top only while parked or moving very slowly. Make sure the trunk divider is correctly positioned before lowering the top.",
-          },
-        ].map((item) => (
-          <div
-            key={item.title}
-            className="rounded-2xl border border-white/10 bg-white/[0.04] p-7"
-          >
-            <h2 className="mb-3 text-2xl font-semibold text-[#d6a85f]">
-              {item.title}
-            </h2>
-            <p className="leading-7 text-white/70">{item.text}</p>
-          </div>
-        ))}
+        <InfoCard title="First Five Minutes">
+          Review your pickup instructions in Turo, check the fuel level, adjust
+          seats and mirrors, connect Bluetooth if desired, and get familiar with
+          the gear selector before leaving.
+        </InfoCard>
+
+        <InfoCard title="Fuel">
+          Premium fuel only. Please return with the same fuel level as pickup
+          unless otherwise arranged through Turo.
+        </InfoCard>
+
+        <InfoCard title="Convertible Top">
+          Operate the convertible top carefully and allow the full cycle to
+          complete before driving away. Make sure nothing is blocking the trunk
+          area before lowering or raising the top.
+        </InfoCard>
+
+        <InfoCard title="Luggage">
+          Soft bags and smaller carry-ons work best. Trunk space is more limited
+          when the convertible top is down.
+        </InfoCard>
+
+        <InfoCard title="Driving">
+          The M4 is powerful and responsive. Please enjoy it respectfully and
+          avoid aggressive launches, burnouts, drifting, or track use.
+        </InfoCard>
+
+        <InfoCard title="Return">
+          Return on time, reasonably clean, and with the same fuel level as
+          pickup. Message through Turo if timing or plans change.
+        </InfoCard>
       </section>
 
       <section className="px-6 pb-20 md:px-16">
-        <h2 className="mb-8 text-4xl font-bold">Common Questions</h2>
+        <div className="rounded-3xl border border-[#d6a85f]/30 bg-[#d6a85f]/10 p-8 md:p-10">
+          <h2 className="mb-4 text-3xl font-bold">Need help or ready to book?</h2>
+          <p className="mb-6 max-w-3xl leading-7 text-white/70">
+            For active reservations, message through your Turo trip thread. To
+            view availability or book another Drive Elevated vehicle, visit our
+            Turo host page.
+          </p>
 
-        <div className="space-y-4">
-          {[
-            {
-              q: "Can I put the top down?",
-              a: "Yes. The Corvette is meant to be enjoyed as a convertible. Please operate the top carefully and only when the vehicle is in a safe position.",
-            },
-            {
-              q: "Does it fit luggage?",
-              a: "Yes, but space is limited. Smaller soft bags work best, especially if you plan to drive with the top down.",
-            },
-            {
-              q: "What fuel should I use?",
-              a: "Premium fuel only.",
-            },
-            {
-              q: "Can I take it on a road trip?",
-              a: "Yes, as long as your trip follows Turo rules, mileage limits, and road-use expectations.",
-            },
-          ].map((faq) => (
-            <div
-              key={faq.q}
-              className="rounded-2xl border border-white/10 bg-black/40 p-6"
-            >
-              <h3 className="mb-2 text-xl font-semibold">{faq.q}</h3>
-              <p className="leading-7 text-white/70">{faq.a}</p>
-            </div>
-          ))}
+          <div className="flex flex-col gap-4 sm:flex-row">
+            <CTAButton href={turoHostLink} external>
+              View Vehicles on Turo →
+            </CTAButton>
+            <CTAButton href="/pickup" variant="outline">
+              Pickup & Return
+            </CTAButton>
+          </div>
         </div>
       </section>
+
+      <Footer />
     </main>
   );
 }
