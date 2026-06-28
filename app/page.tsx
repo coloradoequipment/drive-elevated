@@ -118,6 +118,28 @@ export default function Home() {
                 </div>
               </div>
             ))}
+                    </div>
+        </section>
+
+        <section className="relative z-10 px-6 pb-20 md:px-16">
+          <div className="rounded-3xl border border-[#d6a85f]/30 bg-black/55 p-8 backdrop-blur md:p-10">
+            <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+              Guest Support
+            </p>
+
+            <h2 className="mb-4 text-3xl font-bold">
+              Help &amp; Emergency
+            </h2>
+
+            <p className="mb-6 max-w-3xl leading-8 text-white/75">
+              Accident steps, towing details, roadside help, charging support,
+              and emergency information are available in one place if something
+              unexpected happens during your trip.
+            </p>
+
+            <CTAButton href="/emergency">
+              Open Help &amp; Emergency →
+            </CTAButton>
           </div>
         </section>
       </section>

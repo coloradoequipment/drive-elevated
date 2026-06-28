@@ -9,8 +9,9 @@ const turoHostLink = "https://turo.com/us/en/host/20782143";
 const navLinks = [
   { label: "Home", href: "/" },
   { label: "Vehicles", href: "/#vehicles" },
-  { label: "Pickup", href: "/pickup" },
   { label: "Guest Guide", href: "/guest-guide" },
+  { label: "Pickup", href: "/pickup" },
+  { label: "Help & Emergency", href: "/emergency" },
   { label: "Contact", href: "/contact" },
 ];
 
