@@ -19,7 +19,7 @@ export default function Footer() {
           <Link href="/">Home</Link>
           <Link href="/#vehicles">Vehicles</Link>
           <Link href="/pickup">Pickup</Link>
-          <Link href="/faq">FAQ</Link>
+          <Link href="/guest-guide">Guest Guide</Link>
           <Link href="/contact">Contact</Link>
         </div>
 
