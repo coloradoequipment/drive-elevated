@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import PageHero from "../../components/PageHero";
@@ -293,48 +294,46 @@ export default function CorvettePage() {
         </div>
       </section>
 
-      <section
-        id="luggage"
-        className="grid gap-6 px-6 pb-16 md:grid-cols-2 md:px-16"
-      >
-        <InfoCard title="Packing & Luggage">
-          The C8 Corvette offers surprisingly useful storage between the front
-          trunk and rear cargo area. Soft-sided luggage is usually best because
-          it conforms to the unique shapes of the compartments.
-        </InfoCard>
+      <section className="grid gap-6 px-6 pb-16 md:grid-cols-3 md:px-16">
+  <InfoCard title="📦 Packing & Luggage">
+    The C8 Corvette offers useful storage between the front trunk and rear cargo
+    area. Soft-sided bags and smaller carry-ons work best because they conform
+    to the unique shapes of the compartments.
 
-        <InfoCard title="Front Trunk">
-          A standard airline carry-on can fit well in the frunk when placed on
-          its side. Do not try to stand a carry-on upright if it prevents the
-          frunk from closing properly.
-        </InfoCard>
+    <Link
+      href="/vehicles/corvette/luggage"
+      className="mt-6 inline-block font-semibold text-[#d6a85f]"
+    >
+      View luggage guide →
+    </Link>
+  </InfoCard>
 
-        <InfoCard title="Rear Cargo Area">
-          The rear cargo area can handle additional carry-ons, soft weekend
-          bags, backpacks, or golf bags. Large rigid checked-size suitcases are
-          not recommended.
-        </InfoCard>
+  <InfoCard title="Front Trunk">
+    A standard airline carry-on can fit well in the front cargo area when placed on its
+    side. Do not try to stand a carry-on upright if it prevents the frunk from
+    closing properly.
 
-        <InfoCard title="ZR1 Aero Package">
-          This Corvette has the ZR1 Aero Package with a tall rear spoiler. When
-          loading or unloading from the rear trunk, be careful not to lift bags
-          into the spoiler. Slide items out carefully to avoid scratches or
-          damage.
-        </InfoCard>
+    <Link
+      href="/vehicles/corvette/luggage"
+      className="mt-6 inline-block font-semibold text-[#d6a85f]"
+    >
+      View front storage tips →
+    </Link>
+  </InfoCard>
 
-        <InfoCard title="Seal Line">
-          Before closing either the frunk or rear hatch, make sure all luggage
-          sits completely below the weather seal line. If something sits above
-          the recess, it can interfere with closing and may damage the seal,
-          luggage, or vehicle.
-        </InfoCard>
+  <InfoCard title="Rear Cargo / Z51 Loading">
+    The rear cargo area can handle additional bags, but this Corvette has a tall
+    rear spoiler. Use care when loading or removing luggage so bags do not
+    contact the spoiler or painted body panels.
 
-        <InfoCard title="Best Packing Strategy">
-          For Napa, Tahoe, San Francisco, or a weekend getaway, soft duffels and
-          smaller carry-ons work best. Pack flexible whenever possible and the
-          Corvette becomes much easier to live with.
-        </InfoCard>
-      </section>
+    <Link
+      href="/vehicles/corvette/luggage"
+      className="mt-6 inline-block font-semibold text-[#d6a85f]"
+    >
+      View loading tips →
+    </Link>
+  </InfoCard>
+</section>
 
       <section className="grid gap-6 px-6 pb-16 md:grid-cols-2 md:px-16">
         <InfoCard title="⛽ Fuel">

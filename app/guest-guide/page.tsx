@@ -6,7 +6,7 @@ import CTAButton from "../components/CTAButton";
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 
-export default function FAQPage() {
+export default function GuestGuidePage() {
   return (
     <main className="min-h-screen bg-[#020407] text-white">
       <Navbar />

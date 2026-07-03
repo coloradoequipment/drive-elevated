@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import PageHero from "../../components/PageHero";
@@ -339,7 +340,7 @@ export default function BMWPage() {
         </div>
       </section>
 
-      <section className="grid gap-6 px-6 pb-16 md:grid-cols-2 md:px-16">
+      <section className="grid gap-6 px-6 pb-16 md:grid-cols-3 md:px-16">
         <InfoCard title="⛽ Fuel">
           Premium fuel only — 91 octane or higher. Shell V-Power is recommended
           when available. Please return the BMW with approximately the same fuel
@@ -351,6 +352,29 @@ export default function BMWPage() {
           and use caution with steep driveways. There is no front camera, so
           backing into parking spaces is usually easiest and safest.
         </InfoCard>
+        <Link
+  href="/vehicles/bmw-m4/luggage"
+  className="rounded-2xl border border-white/10 bg-white/[0.04] p-6 transition-all duration-300 hover:border-[#d6a85f]/50 hover:bg-white/[0.06]"
+>
+  <p className="mb-2 text-xs uppercase tracking-[0.35em] text-[#d6a85f]">
+    Trip Planning
+  </p>
+
+  <h3 className="mb-3 text-2xl font-bold">
+    📦 Luggage &amp; Cargo
+  </h3>
+
+  <p className="leading-7 text-white/70">
+    Wondering if everyone and their luggage will fit? View real trunk
+    measurements, photos, and tips for traveling with the convertible top
+    up or down.
+  </p>
+
+  <div className="mt-6 font-semibold text-[#d6a85f]">
+    View Luggage Guide →
+  </div>
+</Link>
+
       </section>
 
             <section id="return" className="px-6 pb-20 md:px-16">

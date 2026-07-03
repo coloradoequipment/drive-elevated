@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 import PageHero from "../../components/PageHero";
@@ -319,10 +320,24 @@ export default function RivianPage() {
 
     <div className="grid gap-6 md:grid-cols-2">
       <InfoCard title="Frunk & Rear Cargo">
-        The Rivian has excellent storage between the frunk, rear cargo area,
-        and additional storage beneath the cargo covers. Take a moment to open
-        the covers and explore the space before loading your bags.
-      </InfoCard>
+  <div className="flex h-full flex-col">
+    <p className="leading-8">
+      The Rivian has excellent storage between the frunk, rear cargo area,
+      and additional storage beneath the cargo floor. Take a moment to open
+      each compartment and explore the available space before loading your
+      luggage. View cargo guide for detailed examples
+    </p>
+
+    <div className="mt-auto pt-6">
+      <Link
+        href="/vehicles/rivian/luggage"
+        className="font-semibold text-[#d6a85f] transition hover:text-[#e3bc78]"
+      >
+        View cargo guide →
+      </Link>
+    </div>
+  </div>
+</InfoCard>
 
       <InfoCard title="Hidden Storage">
         Both the front and rear storage areas have additional space underneath
