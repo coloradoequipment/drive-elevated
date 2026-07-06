@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -19,6 +20,45 @@ import {
   ParkingCircle,
   Clock,
 } from "lucide-react";
+
+const galleryImages = [
+  {
+    src: "/images/vehicles/corvette/gallery/01.jpeg",
+    alt: "2025 Corvette Stingray Convertible",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/02.jpeg",
+    alt: "Corvette Front Three Quarter",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/03.jpeg",
+    alt: "Corvette Side Profile",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/04.jpeg",
+    alt: "Corvette Rear View",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/05.jpeg",
+    alt: "Corvette Interior",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/06.jpeg",
+    alt: "Corvette Convertible Top Down",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/07.jpeg",
+    alt: "Corvette Trunk",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/08.jpeg",
+    alt: "Corvette Detail",
+  },
+  {
+    src: "/images/vehicles/corvette/gallery/09.jpeg",
+    alt: "Corvette Lifestyle",
+  },
+];
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 

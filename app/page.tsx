@@ -3,30 +3,52 @@ import Link from "next/link";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import CTAButton from "./components/CTAButton";
+import VehiclePreviewCard from "./components/VehiclePreviewCard";
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 
 const vehicles = [
   {
     name: "Corvette Convertible",
-    image: "/images/corvette.jpg",
     eyebrow: "Sports Car Weekend",
-    description: "Date nights, wine country, golf getaways, and open-air performance.",
+    description:
+      "Date nights, wine country, golf getaways, and open-air performance.",
     href: "/vehicles/corvette",
+    images: Array.from({ length: 9 }, (_, index) => ({
+      src: `/images/corvette/gallery/${String(index + 1).padStart(
+        2,
+        "0"
+      )}.jpeg`,
+      alt: `Corvette Convertible image ${index + 1}`,
+    })),
   },
   {
     name: "BMW M4 Convertible",
-    image: "/images/bmw-m4.jpg",
     eyebrow: "Luxury Touring",
-    description: "Mountain roads, business travel, special occasions, and top-down cruising.",
+    description:
+      "Mountain roads, business travel, special occasions, and top-down cruising.",
     href: "/vehicles/bmw-m4",
+    images: Array.from({ length: 9 }, (_, index) => ({
+      src: `/images/bmw/gallery/${String(index + 1).padStart(
+        2,
+        "0"
+      )}.jpeg`,
+      alt: `BMW M4 Convertible image ${index + 1}`,
+    })),
   },
   {
     name: "Rivian R1S",
-    image: "/images/rivian.jpg",
     eyebrow: "Adventure Ready",
-    description: "Tahoe trips, family travel, airport runs, and all-electric exploration.",
+    description:
+      "Tahoe trips, family travel, airport runs, and all-electric exploration.",
     href: "/vehicles/rivian",
+    images: Array.from({ length: 9 }, (_, index) => ({
+      src: `/images/rivian/gallery/${String(index + 1).padStart(
+        2,
+        "0"
+      )}.jpeg`,
+      alt: `Rivian R1S image ${index + 1}`,
+    })),
   },
 ];
 
@@ -221,40 +243,8 @@ export default function Home() {
 
           <div className="grid gap-6 md:grid-cols-3">
             {vehicles.map((vehicle) => (
-              <div
-                key={vehicle.name}
-                className="group overflow-hidden rounded-3xl border border-white/15 bg-black/40"
-              >
-                <div className="relative h-72">
-                  <Image
-                    src={vehicle.image}
-                    alt={vehicle.name}
-                    fill
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/35 to-transparent" />
-                </div>
-
-                <div className="p-6">
-                  <p className="mb-3 text-xs font-bold uppercase tracking-[0.3em] text-[#d6a85f]">
-                    {vehicle.eyebrow}
-                  </p>
-                  <h3 className="mb-3 text-2xl font-semibold uppercase tracking-[0.08em]">
-                    {vehicle.name}
-                  </h3>
-                  <p className="mb-6 leading-7 text-white/70">
-                    {vehicle.description}
-                  </p>
-                  <Link
-                    href={vehicle.href}
-                    className="font-semibold text-[#d6a85f] transition hover:text-[#e3bc78]"
-                  >
-                    View Vehicle Guide →
-                  </Link>
-                </div>
-              </div>
-            ))}
+  <VehiclePreviewCard key={vehicle.name} {...vehicle} />
+))}
           </div>
         </div>
       </section>
@@ -275,7 +265,48 @@ export default function Home() {
           </div>
         </div>
       </section>
+<section className="px-6 pb-20 md:px-16">
+  <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-[#d6a85f]/25 bg-black/40 backdrop-blur">
+    <div className="grid md:grid-cols-2">
+      <div className="relative min-h-[340px]">
+        <Image
+          src="/images/napa-corvette.jpeg"
+          alt="Napa Valley Journey"
+          fill
+          className="object-cover"
+        />
+      </div>
 
+      <div className="flex flex-col justify-center p-10">
+        <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+          Featured Journey
+        </p>
+
+        <h2 className="mb-4 text-4xl font-bold">
+          Signature Journey No. 001
+        </h2>
+
+        <h3 className="mb-6 text-2xl text-[#d6a85f]">
+          Napa Valley
+        </h3>
+
+        <p className="mb-8 leading-8 text-white/75">
+          Your vacation begins the moment you leave the airport.
+          Discover our favorite way to arrive in Napa—where coffee,
+          scenic roads, hidden stops, and unforgettable moments become
+          part of the journey.
+        </p>
+
+        <Link
+          href="/journeys/napa"
+          className="font-semibold uppercase tracking-[0.25em] text-[#d6a85f]"
+        >
+          Read the Journey →
+        </Link>
+      </div>
+    </div>
+  </div>
+</section>
       <section className="px-6 pb-20 md:px-16">
         <div className="mx-auto max-w-6xl">
           <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
