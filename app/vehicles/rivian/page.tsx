@@ -50,7 +50,7 @@ const quickStart = [
   {
     icon: Boxes,
     title: "Storage",
-    href: "#storage",
+    href: "/vehicles/rivian/luggage",
     text: "Frunk, rear cargo, under-floor storage, and the built-in flashlight.",
   },
   {
@@ -329,12 +329,12 @@ export default function RivianPage() {
     </p>
 
     <div className="mt-auto pt-6">
-      <Link
-        href="/vehicles/rivian/luggage"
-        className="font-semibold text-[#d6a85f] transition hover:text-[#e3bc78]"
-      >
-        View cargo guide →
-      </Link>
+     <Link
+  href="/vehicles/rivian/luggage"
+  className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+>
+  View Cargo Guide →
+</Link>
     </div>
   </div>
 </InfoCard>
@@ -417,6 +417,31 @@ export default function RivianPage() {
           </div>
         </div>
       </section>
+      <section className="px-6 pb-16 md:px-16">
+  <div className="rounded-3xl border border-[#d6a85f]/30 bg-[#d6a85f]/10 p-8 md:p-10">
+    <p className="mb-4 text-sm uppercase tracking-[0.4em] text-[#d6a85f]">
+      Signature Journey 001
+    </p>
+
+    <h2 className="mb-4 text-3xl font-bold">
+      Planning a Napa Valley Drive?
+    </h2>
+
+    <p className="mb-6 max-w-4xl leading-8 text-white/75">
+      Before heading straight to your hotel, explore our Drive Elevated
+      Signature Journey to Napa Valley. It includes coffee stops, the Yolo
+      Causeway, Davis, Silverado Trail, curated Napa stops, and ways to make the
+      drive part of the experience.
+    </p>
+
+    <Link
+      href="/journeys/napa"
+      className="inline-flex rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+    >
+      Read Journey 001 →
+    </Link>
+  </div>
+</section>
       <Footer />
     </main>
   );

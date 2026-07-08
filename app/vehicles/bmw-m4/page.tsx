@@ -360,19 +360,17 @@ export default function BMWPage() {
     Trip Planning
   </p>
 
-  <h3 className="mb-3 text-2xl font-bold">
-    📦 Luggage &amp; Cargo
-  </h3>
+  <h3 className="mb-3 text-2xl font-bold">📦 Luggage &amp; Cargo</h3>
 
   <p className="leading-7 text-white/70">
     Wondering if everyone and their luggage will fit? View real trunk
-    measurements, photos, and tips for traveling with the convertible top
-    up or down.
+    measurements, photos, and tips for traveling with the convertible top up or
+    down.
   </p>
 
-  <div className="mt-6 font-semibold text-[#d6a85f]">
+  <span className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25">
     View Luggage Guide →
-  </div>
+  </span>
 </Link>
 
       </section>
@@ -422,6 +420,31 @@ export default function BMWPage() {
           </div>
         </div>
       </section>
+      <section className="px-6 pb-16 md:px-16">
+  <div className="rounded-3xl border border-[#d6a85f]/30 bg-[#d6a85f]/10 p-8 md:p-10">
+    <p className="mb-4 text-sm uppercase tracking-[0.4em] text-[#d6a85f]">
+      Signature Journey 001
+    </p>
+
+    <h2 className="mb-4 text-3xl font-bold">
+      Planning a Napa Valley Drive?
+    </h2>
+
+    <p className="mb-6 max-w-4xl leading-8 text-white/75">
+      Before heading straight to your hotel, explore our Drive Elevated
+      Signature Journey to Napa Valley. It includes coffee stops, the Yolo
+      Causeway, Davis, Silverado Trail, curated Napa stops, and ways to make the
+      drive part of the experience.
+    </p>
+
+    <Link
+      href="/journeys/napa"
+      className="inline-flex rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+    >
+      Read Journey 001 →
+    </Link>
+  </div>
+</section>
                     <Footer />
                   </main>
                 );

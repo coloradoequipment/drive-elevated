@@ -21,45 +21,6 @@ import {
   Clock,
 } from "lucide-react";
 
-const galleryImages = [
-  {
-    src: "/images/vehicles/corvette/gallery/01.jpeg",
-    alt: "2025 Corvette Stingray Convertible",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/02.jpeg",
-    alt: "Corvette Front Three Quarter",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/03.jpeg",
-    alt: "Corvette Side Profile",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/04.jpeg",
-    alt: "Corvette Rear View",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/05.jpeg",
-    alt: "Corvette Interior",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/06.jpeg",
-    alt: "Corvette Convertible Top Down",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/07.jpeg",
-    alt: "Corvette Trunk",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/08.jpeg",
-    alt: "Corvette Detail",
-  },
-  {
-    src: "/images/vehicles/corvette/gallery/09.jpeg",
-    alt: "Corvette Lifestyle",
-  },
-];
-
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 
 const quickStart = [
@@ -84,7 +45,7 @@ const quickStart = [
   {
     icon: BriefcaseBusiness,
     title: "Packing & Luggage",
-    href: "#luggage",
+    href: "/vehicles/corvette/luggage",
     text: "What fits best in the frunk and rear cargo area.",
   },
   {
@@ -341,11 +302,11 @@ export default function CorvettePage() {
     to the unique shapes of the compartments.
 
     <Link
-      href="/vehicles/corvette/luggage"
-      className="mt-6 inline-block font-semibold text-[#d6a85f]"
-    >
-      View luggage guide →
-    </Link>
+  href="/vehicles/corvette/luggage"
+  className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+>
+  View Luggage Guide →
+</Link>
   </InfoCard>
 
   <InfoCard title="Front Trunk">
@@ -354,11 +315,11 @@ export default function CorvettePage() {
     closing properly.
 
     <Link
-      href="/vehicles/corvette/luggage"
-      className="mt-6 inline-block font-semibold text-[#d6a85f]"
-    >
-      View front storage tips →
-    </Link>
+  href="/vehicles/corvette/luggage"
+  className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+>
+  View Front Storage Guide →
+</Link>
   </InfoCard>
 
   <InfoCard title="Rear Cargo / Z51 Loading">
@@ -366,12 +327,12 @@ export default function CorvettePage() {
     rear spoiler. Use care when loading or removing luggage so bags do not
     contact the spoiler or painted body panels.
 
-    <Link
-      href="/vehicles/corvette/luggage"
-      className="mt-6 inline-block font-semibold text-[#d6a85f]"
-    >
-      View loading tips →
-    </Link>
+   <Link
+  href="/vehicles/corvette/luggage"
+  className="mt-6 inline-flex w-full items-center justify-center rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-5 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+>
+  View Loading Guide →
+</Link>
   </InfoCard>
 </section>
 
@@ -467,6 +428,31 @@ export default function CorvettePage() {
                 </div>
               </div>
             </section>
+            <section className="px-6 pb-16 md:px-16">
+  <div className="rounded-3xl border border-[#d6a85f]/30 bg-[#d6a85f]/10 p-8 md:p-10">
+    <p className="mb-4 text-sm uppercase tracking-[0.4em] text-[#d6a85f]">
+      Signature Journey 001
+    </p>
+
+    <h2 className="mb-4 text-3xl font-bold">
+      Planning a Napa Valley Drive?
+    </h2>
+
+    <p className="mb-6 max-w-4xl leading-8 text-white/75">
+      Before heading straight to your hotel, explore our Drive Elevated
+      Signature Journey to Napa Valley. It includes coffee stops, the Yolo
+      Causeway, Davis, Silverado Trail, curated Napa stops, and ways to make the
+      drive part of the experience.
+    </p>
+
+    <Link
+      href="/journeys/napa"
+      className="inline-flex rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
+    >
+      Read Journey 001 →
+    </Link>
+  </div>
+</section>
       <Footer />
     </main>
   );
