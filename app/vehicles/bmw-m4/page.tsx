@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -19,6 +20,50 @@ import {
   ParkingCircle,
   Palette,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "BMW M4 Convertible Rental in Sacramento | Drive Elevated",
+  description:
+    "Explore the BMW M4 Competition Convertible from Drive Elevated, with Sacramento airport delivery, M1 and M2 drive modes, convertible controls, premium-fuel guidance, luggage planning, and Northern California trip support.",
+
+  keywords: [
+    "BMW M4 rental Sacramento",
+    "BMW M4 convertible rental Sacramento",
+    "BMW M4 Competition rental",
+    "BMW convertible rental Napa Valley",
+    "luxury car rental Sacramento",
+    "SMF airport BMW rental",
+    "Drive Elevated BMW M4",
+  ],
+
+  alternates: {
+    canonical: "/vehicles/bmw-m4",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://driveelevated.com/vehicles/bmw-m4",
+    title: "BMW M4 Competition Convertible | Drive Elevated",
+    description:
+      "Luxury touring, open-air performance, detailed guest support, luggage guidance, and Sacramento airport delivery for Northern California travel.",
+    images: [
+      {
+        url: "/images/bmw.jpg",
+        width: 1200,
+        height: 630,
+        alt: "BMW M4 Competition Convertible from Drive Elevated",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "BMW M4 Competition Convertible | Drive Elevated",
+    description:
+      "Explore the BMW M4 guide, luggage planning, and booking details for Sacramento and Northern California.",
+    images: ["/images/bmw.jpg"],
+  },
+};
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 

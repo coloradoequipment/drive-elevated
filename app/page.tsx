@@ -106,24 +106,24 @@ const resources = [
     href: "/pickup",
   },
   {
-    title: "BMW Luggage Guide",
-    text: "Convertible divider details, trunk dimensions, and luggage planning.",
-    href: "/vehicles/bmw-m4/luggage",
+    title: "Help & Emergency",
+    text: "Accident steps, roadside help, towing details, and emergency support.",
+    href: "/emergency",
   },
   {
     title: "Corvette Cargo Guide",
     text: "Frunk, rear trunk, golf clubs, carry-ons, and rear wing loading tips.",
     href: "/vehicles/corvette/luggage",
   },
+   {
+    title: "BMW Luggage Guide",
+    text: "Convertible divider details, trunk dimensions, and luggage planning.",
+    href: "/vehicles/bmw-m4/luggage",
+  },
   {
     title: "Rivian Cargo Guide",
     text: "Flexible passenger and cargo layouts for family and adventure travel.",
     href: "/vehicles/rivian/luggage",
-  },
-  {
-    title: "Help & Emergency",
-    text: "Accident steps, roadside help, towing details, and emergency support.",
-    href: "/emergency",
   },
 ];
 

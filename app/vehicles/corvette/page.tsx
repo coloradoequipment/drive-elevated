@@ -1,4 +1,4 @@
-
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -20,6 +20,50 @@ import {
   ParkingCircle,
   Clock,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Corvette Convertible Rental in Sacramento | Drive Elevated",
+  description:
+    "Explore the 2025 Corvette Stingray Convertible from Drive Elevated, with Sacramento airport delivery, vehicle controls, premium-fuel guidance, luggage planning, and Northern California trip support.",
+
+  keywords: [
+    "Corvette rental Sacramento",
+    "Corvette convertible rental Sacramento",
+    "C8 Corvette rental",
+    "Corvette rental Napa Valley",
+    "sports car rental Sacramento",
+    "SMF airport Corvette rental",
+    "Drive Elevated Corvette",
+  ],
+
+  alternates: {
+    canonical: "/vehicles/corvette",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://driveelevated.com/vehicles/corvette",
+    title: "2025 Corvette Stingray Convertible | Drive Elevated",
+    description:
+      "Open-air performance, detailed guest support, luggage guidance, and Sacramento airport delivery for an unforgettable Northern California drive.",
+    images: [
+      {
+        url: "/images/corvette.jpg",
+        width: 1200,
+        height: 630,
+        alt: "2025 Corvette Stingray Convertible from Drive Elevated",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "2025 Corvette Stingray Convertible | Drive Elevated",
+    description:
+      "Explore the Corvette guide, luggage planning, and booking details for Sacramento and Northern California.",
+    images: ["/images/corvette.jpg"],
+  },
+};
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 

@@ -1,8 +1,55 @@
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
 import InfoCard from "../components/InfoCard";
 import CTAButton from "../components/CTAButton";
+
+export const metadata: Metadata = {
+  title: "Contact Drive Elevated | Concierge Support",
+
+  description:
+    "Contact Drive Elevated for reservation questions, vehicle information, special requests, or support before, during, or after your rental. Active guests should message through Turo for the fastest assistance.",
+
+  keywords: [
+    "Contact Drive Elevated",
+    "Sacramento Turo host",
+    "Drive Elevated support",
+    "Turo concierge",
+    "Luxury car rental Sacramento contact",
+    "BMW rental Sacramento",
+    "Corvette rental Sacramento",
+    "Rivian rental Sacramento",
+  ],
+
+  alternates: {
+    canonical: "/contact",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://driveelevated.com/contact",
+    title: "Contact Drive Elevated",
+    description:
+      "Questions before booking or during your trip? We're here to help make your Drive Elevated experience exceptional.",
+    images: [
+      {
+        url: "/images/homepage-reference.png",
+        width: 1200,
+        height: 630,
+        alt: "Drive Elevated Contact",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Contact Drive Elevated",
+    description:
+      "Reservation questions, concierge support, and guest assistance.",
+    images: ["/images/homepage-reference.png"],
+  },
+};
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 

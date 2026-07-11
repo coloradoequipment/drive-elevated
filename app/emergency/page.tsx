@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import PageHero from "../components/PageHero";
@@ -12,6 +13,51 @@ import {
   Truck,
   MessageCircle,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Turo Accident & Emergency Guide | Drive Elevated",
+
+  description:
+    "Accident procedures, roadside assistance, towing information, documentation steps, and emergency support for Drive Elevated guests in Sacramento and Northern California.",
+
+  keywords: [
+    "Turo accident guide",
+    "Turo roadside assistance",
+    "Turo emergency instructions",
+    "rental car accident Sacramento",
+    "Drive Elevated emergency guide",
+    "Turo towing information",
+    "Caliber Collision Roseville",
+  ],
+
+  alternates: {
+    canonical: "/emergency",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://driveelevated.com/emergency",
+    title: "Help & Emergency Guide | Drive Elevated",
+    description:
+      "Clear accident, roadside, towing, documentation, and emergency instructions for active Drive Elevated reservations.",
+    images: [
+      {
+        url: "/images/homepage-reference.png",
+        width: 1200,
+        height: 630,
+        alt: "Drive Elevated help and emergency guide",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Help & Emergency Guide | Drive Elevated",
+    description:
+      "Accident steps, roadside help, towing information, and emergency support for Drive Elevated guests.",
+    images: ["/images/homepage-reference.png"],
+  },
+};
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 

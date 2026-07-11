@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
@@ -6,6 +7,50 @@ import JourneyHero from "../../components/JourneyHero";
 import DriveElevatedCallout from "../../components/DriveElevatedCallout";
 import JourneyCuratedStop from "../../components/JourneyCuratedStop";
 import JourneyChapter from "../../components/JourneyChapter";
+
+export const metadata: Metadata = {
+  title: "Sacramento to Napa Valley Scenic Drive | Journey 001",
+  description:
+    "Discover a memorable drive from Sacramento to Napa Valley with Temple Coffee, the Yolo Causeway, Davis, Silverado Trail, scenic stops, and curated Napa recommendations.",
+
+  keywords: [
+    "Sacramento to Napa Valley drive",
+    "scenic route Sacramento to Napa",
+    "best stops between Sacramento and Napa",
+    "Napa Valley road trip",
+    "Silverado Trail scenic drive",
+    "things to do on the way to Napa",
+    "Drive Elevated Journey 001",
+  ],
+
+  alternates: {
+    canonical: "/journeys/napa",
+  },
+
+  openGraph: {
+    type: "article",
+    url: "https://driveelevated.com/journeys/napa",
+    title: "Journey 001: The Drive from Sacramento to Napa Valley",
+    description:
+      "A curated Sacramento-to-Napa journey featuring coffee, wetlands, Davis, Silverado Trail, scenic roads, and memorable wine-country stops.",
+    images: [
+      {
+        url: "/images/napa-corvette.jpeg",
+        width: 1200,
+        height: 630,
+        alt: "Corvette on a scenic Napa Valley driving journey",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Journey 001: Sacramento to Napa Valley",
+    description:
+      "Make the drive part of the vacation with a curated route from Sacramento to Napa Valley.",
+    images: ["/images/napa-corvette.jpeg"],
+  },
+};
 
 const curatedStops = [
   {

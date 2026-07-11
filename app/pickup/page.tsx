@@ -5,12 +5,48 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title:
-    "SMF Airport Pickup & Return Guide | Drive Elevated Sacramento",
+  title: "SMF Airport Pickup & Return Guide | Drive Elevated",
+
   description:
-    "Know exactly what to expect when picking up or returning your Drive Elevated vehicle at Sacramento International Airport or our Roseville location.",
+    "A complete Sacramento International Airport pickup and return guide for Drive Elevated guests, including Turo wayfinding, parking, lockbox access, premium fuel, Rivian charging, and Roseville pickup.",
+
+  keywords: [
+    "SMF Turo pickup",
+    "Sacramento airport Turo pickup",
+    "Sacramento airport car return",
+    "Turo SMF parking",
+    "SMF airport wayfinding",
+    "Turo lockbox pickup",
+    "Roseville vehicle pickup",
+    "Drive Elevated pickup guide",
+  ],
+
   alternates: {
     canonical: "/pickup",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://driveelevated.com/pickup",
+    title: "SMF Arrival & Departure Concierge | Drive Elevated",
+    description:
+      "Know exactly what to expect when picking up or returning your Drive Elevated vehicle at Sacramento International Airport or our Roseville location.",
+    images: [
+      {
+        url: "/images/guest-guide/smf-arrival-guide.png",
+        width: 1024,
+        height: 1536,
+        alt: "Drive Elevated Sacramento International Airport pickup and return guide",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "SMF Arrival & Departure Concierge | Drive Elevated",
+    description:
+      "Airport wayfinding, parking, vehicle access, return instructions, fuel, charging, and local pickup guidance.",
+    images: ["/images/guest-guide/smf-arrival-guide.png"],
   },
 };
 

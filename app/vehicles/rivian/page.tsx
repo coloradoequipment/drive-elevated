@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
@@ -19,6 +20,51 @@ import {
   Volume2,
   Boxes,
 } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "Rivian R1S Rental in Sacramento | Drive Elevated",
+  description:
+    "Explore the Rivian R1S Adventure from Drive Elevated, with Sacramento airport delivery, charging guidance, Driver+, cargo planning, family travel tips, and curated Northern California adventures.",
+
+  keywords: [
+    "Rivian rental Sacramento",
+    "Rivian R1S rental Sacramento",
+    "electric SUV rental Sacramento",
+    "Rivian airport rental",
+    "Rivian rental Lake Tahoe",
+    "Rivian rental Napa Valley",
+    "SMF airport Rivian rental",
+    "Drive Elevated Rivian",
+  ],
+
+  alternates: {
+    canonical: "/vehicles/rivian",
+  },
+
+  openGraph: {
+    type: "website",
+    url: "https://driveelevated.com/vehicles/rivian",
+    title: "Rivian R1S Adventure | Drive Elevated",
+    description:
+      "Luxury electric adventure with detailed charging guidance, cargo planning, family travel support, and Sacramento airport delivery.",
+    images: [
+      {
+        url: "/images/rivian.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Rivian R1S Adventure from Drive Elevated",
+      },
+    ],
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Rivian R1S Adventure | Drive Elevated",
+    description:
+      "Explore the Rivian guide, charging tips, cargo planning, and booking details for Sacramento and Northern California.",
+    images: ["/images/rivian.jpg"],
+  },
+};
 
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 
