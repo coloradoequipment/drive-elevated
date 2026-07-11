@@ -248,68 +248,101 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 py-24 md:px-16">
-  <div className="mx-auto max-w-6xl rounded-3xl border border-[#d6a85f]/25 bg-[#11100c] p-8 md:p-10">
-    <div className="text-left">
-      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#d6a85f]">
-        Why Guests Choose Drive Elevated
-      </p>
+      <section className="px-6 pb-20 pt-10 md:px-16 md:pb-24 md:pt-14">
+  <div className="mx-auto max-w-6xl">
+    <div className="overflow-hidden rounded-3xl border border-[#d6a85f]/25 bg-[#11100c]">
+      <div className="grid gap-0 lg:grid-cols-[1.15fr_0.85fr]">
+        <div className="p-8 md:p-12">
+          <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#d6a85f]">
+            The Drive Elevated Difference
+          </p>
 
-      <h2 className="mb-6 text-4xl font-bold md:text-5xl">
-        Built for Northern California.
-      </h2>
+          <h2 className="mb-6 text-4xl font-bold leading-tight md:text-5xl">
+            Built for Northern California.
+          </h2>
 
-      <p className="mb-7 max-w-4xl text-xl leading-9 text-white/75">
-        Based in Sacramento, every Drive Elevated vehicle is selected to help
-        you experience Northern California the way it deserves to be explored.
-      </p>
+          <p className="mb-6 max-w-3xl text-lg leading-9 text-white/75">
+            Based in Sacramento, every Drive Elevated vehicle is selected to
+            help you experience Northern California the way it deserves to be
+            explored.
+          </p>
 
-      <p className="max-w-4xl leading-9 text-white/70">
-        From Napa Valley wine country and Lake Tahoe to Highway 1, Gold Country,
-        and California&apos;s most memorable roads, every route has been
-        thoughtfully chosen to turn the drive into part of the destination.
-      </p>
+          <p className="max-w-3xl leading-8 text-white/65">
+            From Napa Valley wine country and Lake Tahoe to Highway 1, Gold
+            Country, and California&apos;s most memorable roads, the vehicle
+            should do more than take you there. It should become part of the
+            destination.
+          </p>
+        </div>
 
-      <div className="mt-8 border-l-2 border-[#d6a85f] pl-5">
-        <p className="text-lg leading-8 text-white/75">
-          Because the destination matters.
-        </p>
+        <div className="flex items-center border-t border-white/10 bg-black/25 p-8 lg:border-l lg:border-t-0 md:p-12">
+          <div className="border-l-2 border-[#d6a85f] pl-6">
+            <p className="mb-2 text-lg leading-8 text-white/65">
+              Because the destination matters.
+            </p>
 
-        <p className="font-semibold text-white">
-          But the drive should too.
-        </p>
+            <p className="text-2xl font-semibold text-white">
+              But the drive should too.
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-          <div className="grid gap-6 md:grid-cols-4">
-            {trustItems.map((item) => (
-              <div key={item.title}>
-                <h3 className="mb-3 text-xl font-bold">{item.title}</h3>
-                <p className="leading-7 text-white/70">{item.text}</p>
-              </div>
-            ))}
+<section className="px-6 pb-24 md:px-16">
+  <div className="mx-auto max-w-6xl">
+    <div className="mb-8">
+      <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+        Why Guests Choose Drive Elevated
+      </p>
+
+      <h2 className="text-3xl font-bold md:text-4xl">
+        Thoughtful preparation at every stage of the trip.
+      </h2>
+    </div>
+
+    <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+      {trustItems.map((item, index) => (
+        <div
+          key={item.title}
+          className="rounded-3xl border border-white/10 bg-white/[0.04] p-7 transition hover:border-[#d6a85f]/40 hover:bg-white/[0.06]"
+        >
+          <div className="mb-6 flex h-11 w-11 items-center justify-center rounded-full border border-[#d6a85f]/50 bg-[#d6a85f]/10 text-sm font-bold text-[#d6a85f]">
+            {String(index + 1).padStart(2, "0")}
           </div>
-        <section className="px-6 pb-20 md:px-16">
-  <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-[#d6a85f]/25 bg-black/40 backdrop-blur">
+
+          <h3 className="mb-3 text-xl font-bold">{item.title}</h3>
+
+          <p className="leading-7 text-white/70">{item.text}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section className="px-6 pb-24 md:px-16">
+  <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-[#d6a85f]/25 bg-black/40">
     <div className="grid md:grid-cols-2">
-      <div className="relative min-h-[340px]">
+      <div className="relative min-h-[360px] md:min-h-[460px]">
         <Image
           src="/images/napa-corvette.jpeg"
-          alt="Corvette on a Drive Elevated Napa Valley journey"
+          alt="Corvette on a scenic Napa Valley driving journey"
           fill
           sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
         />
+
+        <div className="absolute inset-0 bg-gradient-to-t from-black/45 to-transparent md:bg-gradient-to-r md:from-transparent md:to-black/25" />
       </div>
 
-      <div className="flex flex-col justify-center p-10">
-        <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+      <div className="flex flex-col justify-center p-8 md:p-12">
+        <p className="mb-4 text-sm uppercase tracking-[0.42em] text-[#d6a85f]">
           Featured Drive Elevated Journey
         </p>
 
-        <h2 className="mb-4 text-4xl font-bold">
+        <h2 className="mb-3 text-4xl font-bold md:text-5xl">
           Signature Journey No. 001
         </h2>
 
@@ -318,16 +351,16 @@ export default function Home() {
         </h3>
 
         <p className="mb-8 leading-8 text-white/75">
-          Your vacation begins the moment you leave the airport. Discover our
-          favorite way to arrive in Napa, where coffee, scenic roads, hidden
-          stops, and unforgettable moments become part of the journey.
+          Discover a memorable drive from Sacramento to Napa Valley through
+          local coffee, the Yolo Causeway, Davis, Silverado Trail, scenic roads,
+          and carefully curated wine-country stops.
         </p>
 
         <Link
           href="/journeys/napa"
-          className="font-semibold uppercase tracking-[0.25em] text-[#d6a85f]"
+          className="inline-flex w-fit rounded-full border border-[#d6a85f]/60 bg-[#d6a85f]/15 px-6 py-3 text-sm font-bold uppercase tracking-[0.18em] text-[#d6a85f] transition hover:bg-[#d6a85f]/25"
         >
-          Read the Journey →
+          Read Journey 001 →
         </Link>
       </div>
     </div>
@@ -433,4 +466,7 @@ export default function Home() {
   </div>
 </section>
 
-<Footer />
+      <Footer />
+    </main>
+  );
+}
