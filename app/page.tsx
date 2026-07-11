@@ -189,8 +189,7 @@ export default function Home() {
             <div className="my-7 h-1 w-28 bg-[#d6a85f]" />
 
             <p className="mb-9 max-w-2xl text-lg leading-8 text-white/82">
-              Premium vehicles, thoughtful preparation, detailed guest guides,
-              and curated support designed to make every rental feel effortless.
+              Premium Corvette, BMW M4, and Rivian rentals with Sacramento International Airport (SMF) delivery, detailed guest guides, curated Northern California driving journeys, and concierge-level support designed to make every trip effortless.
             </p>
 
             <div className="flex flex-col gap-4 sm:flex-row">
@@ -210,7 +209,7 @@ export default function Home() {
           </p>
 
           <h2 className="mb-10 text-4xl font-bold md:text-5xl">
-            Simple. Seamless. Elevated.
+            Luxury Turo Rentals Made Simple. Seamless. Elevated.
           </h2>
 
           <div className="grid gap-6 md:grid-cols-4">
@@ -237,7 +236,7 @@ export default function Home() {
               Our Vehicles
             </p>
             <h2 className="text-4xl font-bold md:text-5xl">
-              Choose Your Drive
+              Choose Your Premium Vehicle
             </h2>
           </div>
 
@@ -249,11 +248,40 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="px-6 pb-20 md:px-16">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-[#d6a85f]/25 bg-[#11100c] p-8 md:p-10">
-          <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-            Why Guests Choose Drive Elevated
-          </p>
+      <section className="px-6 py-24 md:px-16">
+  <div className="mx-auto max-w-6xl rounded-3xl border border-[#d6a85f]/25 bg-[#11100c] p-8 md:p-10">
+    <div className="text-left">
+      <p className="mb-4 text-sm font-semibold uppercase tracking-[0.35em] text-[#d6a85f]">
+        Why Guests Choose Drive Elevated
+      </p>
+
+      <h2 className="mb-6 text-4xl font-bold md:text-5xl">
+        Built for Northern California.
+      </h2>
+
+      <p className="mb-7 max-w-4xl text-xl leading-9 text-white/75">
+        Based in Sacramento, every Drive Elevated vehicle is selected to help
+        you experience Northern California the way it deserves to be explored.
+      </p>
+
+      <p className="max-w-4xl leading-9 text-white/70">
+        From Napa Valley wine country and Lake Tahoe to Highway 1, Gold Country,
+        and California&apos;s most memorable roads, every route has been
+        thoughtfully chosen to turn the drive into part of the destination.
+      </p>
+
+      <div className="mt-8 border-l-2 border-[#d6a85f] pl-5">
+        <p className="text-lg leading-8 text-white/75">
+          Because the destination matters.
+        </p>
+
+        <p className="font-semibold text-white">
+          But the drive should too.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
 
           <div className="grid gap-6 md:grid-cols-4">
             {trustItems.map((item) => (
@@ -263,23 +291,22 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-<section className="px-6 pb-20 md:px-16">
+        <section className="px-6 pb-20 md:px-16">
   <div className="mx-auto max-w-6xl overflow-hidden rounded-3xl border border-[#d6a85f]/25 bg-black/40 backdrop-blur">
     <div className="grid md:grid-cols-2">
       <div className="relative min-h-[340px]">
         <Image
           src="/images/napa-corvette.jpeg"
-          alt="Napa Valley Journey"
+          alt="Corvette on a Drive Elevated Napa Valley journey"
           fill
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
         />
       </div>
 
       <div className="flex flex-col justify-center p-10">
         <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-          Featured Journey
+          Featured Drive Elevated Journey
         </p>
 
         <h2 className="mb-4 text-4xl font-bold">
@@ -287,14 +314,13 @@ export default function Home() {
         </h2>
 
         <h3 className="mb-6 text-2xl text-[#d6a85f]">
-          Napa Valley
+          The Drive to Napa Valley
         </h3>
 
         <p className="mb-8 leading-8 text-white/75">
-          Your vacation begins the moment you leave the airport.
-          Discover our favorite way to arrive in Napa—where coffee,
-          scenic roads, hidden stops, and unforgettable moments become
-          part of the journey.
+          Your vacation begins the moment you leave the airport. Discover our
+          favorite way to arrive in Napa, where coffee, scenic roads, hidden
+          stops, and unforgettable moments become part of the journey.
         </p>
 
         <Link
@@ -307,94 +333,104 @@ export default function Home() {
     </div>
   </div>
 </section>
-      <section className="px-6 pb-20 md:px-16">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-            Guest Resources
+
+<section className="px-6 pb-20 md:px-16">
+  <div className="mx-auto max-w-6xl">
+    <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+      Guest Resources
+    </p>
+
+    <h2 className="mb-8 text-4xl font-bold md:text-5xl">
+      Everything You Need Before, During, and After Your Rental
+    </h2>
+
+    <div className="grid gap-6 md:grid-cols-3">
+      {resources.map((resource) => (
+        <Link
+          key={resource.title}
+          href={resource.href}
+          className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-[#d6a85f]/50 hover:bg-white/[0.06]"
+        >
+          <h3 className="mb-3 text-xl font-bold">{resource.title}</h3>
+
+          <p className="mb-6 leading-7 text-white/70">
+            {resource.text}
           </p>
 
-          <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-            Guides Before, During, and After Your Trip
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-3">
-            {resources.map((resource) => (
-              <Link
-                key={resource.title}
-                href={resource.href}
-                className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 transition hover:border-[#d6a85f]/50 hover:bg-white/[0.06]"
-              >
-                <h3 className="mb-3 text-xl font-bold">{resource.title}</h3>
-                <p className="mb-6 leading-7 text-white/70">{resource.text}</p>
-                <p className="font-semibold text-[#d6a85f]">Open guide →</p>
-              </Link>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      <section className="px-6 pb-20 md:px-16">
-        <div className="mx-auto max-w-6xl">
-          <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-            Guest Reviews
-          </p>
-
-          <h2 className="mb-8 text-4xl font-bold md:text-5xl">
-            Real Experiences. Real Guests.
-          </h2>
-
-          <div className="grid gap-6 md:grid-cols-3">
-  {reviews.map((review) => (
-    <div
-      key={review.guest}
-      className="rounded-3xl border border-white/10 bg-black/30 p-6"
-    >
-      <p className="mb-4 text-xl text-[#d6a85f]">{review.stars}</p>
-
-      <p className="mb-6 leading-8 text-white/75">
-        "{review.quote}"
-      </p>
-
-      <div className="mb-6">
-        <p className="font-semibold text-white">{review.guest}</p>
-        <p className="text-sm text-white/50">{review.vehicle}</p>
-      </div>
-
-      <Link
-        href={turoHostLink}
-        target="_blank"
-        className="font-semibold text-[#d6a85f] transition hover:text-[#e3bc78]"
-      >
-        View reviews on Turo →
-      </Link>
+          <p className="font-semibold text-[#d6a85f]">Open guide →</p>
+        </Link>
+      ))}
     </div>
-  ))}
-</div>
-        </div>
-      </section>
+  </div>
+</section>
 
-      <section className="px-6 pb-24 md:px-16">
-        <div className="mx-auto max-w-6xl rounded-3xl border border-[#d6a85f]/30 bg-[#d6a85f]/10 p-8 text-center md:p-12">
-          <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
-            Ready to Elevate Your Next Drive?
+<section className="px-6 pb-20 md:px-16">
+  <div className="mx-auto max-w-6xl">
+    <p className="mb-5 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+      Guest Reviews
+    </p>
+
+    <h2 className="mb-8 text-4xl font-bold md:text-5xl">
+      Real Experiences. Real Guests.
+    </h2>
+
+    <div className="grid gap-6 md:grid-cols-3">
+      {reviews.map((review) => (
+        <div
+          key={review.guest}
+          className="rounded-3xl border border-white/10 bg-black/30 p-6"
+        >
+          <p className="mb-4 text-xl text-[#d6a85f]">{review.stars}</p>
+
+          <p className="mb-6 leading-8 text-white/75">
+            &ldquo;{review.quote}&rdquo;
           </p>
 
-          <h2 className="mx-auto mb-6 max-w-3xl text-4xl font-bold md:text-5xl">
-            Choose a vehicle that turns the trip into part of the experience.
-          </h2>
-
-          <div className="flex flex-col justify-center gap-4 sm:flex-row">
-            <CTAButton href={turoHostLink} external>
-              View Turo Profile →
-            </CTAButton>
-            <CTAButton href="/#vehicles" variant="outline">
-              Explore Fleet →
-            </CTAButton>
+          <div className="mb-6">
+            <p className="font-semibold text-white">{review.guest}</p>
+            <p className="text-sm text-white/50">{review.vehicle}</p>
           </div>
-        </div>
-      </section>
 
-      <Footer />
-    </main>
-  );
-}
+          <a
+            href={turoHostLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-semibold text-[#d6a85f] transition hover:text-[#e3bc78]"
+          >
+            View reviews on Turo →
+          </a>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<section className="px-6 pb-24 md:px-16">
+  <div className="mx-auto max-w-6xl rounded-3xl border border-[#d6a85f]/30 bg-[#d6a85f]/10 p-8 text-center md:p-12">
+    <p className="mb-4 text-sm uppercase tracking-[0.45em] text-[#d6a85f]">
+      Ready to Elevate Your Next Drive?
+    </p>
+
+    <h2 className="mx-auto mb-6 max-w-3xl text-4xl font-bold md:text-5xl">
+      Ready for Your Next Northern California Adventure?
+    </h2>
+
+    <p className="mx-auto mb-8 max-w-3xl leading-8 text-white/75">
+      Whether you are planning a Napa Valley weekend, a Lake Tahoe escape, a
+      special celebration, or simply want to enjoy one of California&apos;s
+      great driving roads, Drive Elevated is ready when you are.
+    </p>
+
+    <div className="flex flex-col justify-center gap-4 sm:flex-row">
+      <CTAButton href={turoHostLink} external>
+        View Turo Profile →
+      </CTAButton>
+
+      <CTAButton href="/#vehicles" variant="outline">
+        Explore Fleet →
+      </CTAButton>
+    </div>
+  </div>
+</section>
+
+<Footer />
