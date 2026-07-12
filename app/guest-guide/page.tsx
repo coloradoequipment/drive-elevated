@@ -68,7 +68,7 @@ const faqs = [
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "@id": "https://driveelevated.com/guest-guide#faq",
+  "@id": "https://www.driveelevated.com/guest-guide#faq",
   mainEntity: faqs.map((faq) => ({
     "@type": "Question",
     name: faq.question,

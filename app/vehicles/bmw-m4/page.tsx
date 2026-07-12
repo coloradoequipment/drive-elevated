@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://driveelevated.com/vehicles/bmw-m4",
+    url: "https://www.driveelevated.com/vehicles/bmw-m4",
     title: "BMW M4 Competition Convertible | Drive Elevated",
     description:
       "Luxury touring, open-air performance, detailed guest support, luggage guidance, and Sacramento airport delivery for Northern California travel.",
@@ -68,25 +68,25 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "@id": "https://driveelevated.com/vehicles/bmw-m4#breadcrumb",
+  "@id": "https://www.driveelevated.com/vehicles/bmw-m4#breadcrumb",
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://driveelevated.com",
+      item: "https://www.driveelevated.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Vehicles",
-      item: "https://driveelevated.com/#vehicles",
+      item: "https://www.driveelevated.com/#vehicles",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "BMW M4 Convertible",
-      item: "https://driveelevated.com/vehicles/bmw-m4",
+      item: "https://www.driveelevated.com/vehicles/bmw-m4",
     },
   ],
 };

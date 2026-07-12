@@ -1,13 +1,14 @@
+import Script from "next/script";
 import type { Metadata } from "next";
 import "./globals.css";
 
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "@id": "https://driveelevated.com/#organization",
+  "@id": "https://www.driveelevated.com/#organization",
   name: "Drive Elevated",
-  url: "https://driveelevated.com",
-  logo: "https://driveelevated.com/images/logo-transparent.png",
+  url: "https://www.driveelevated.com",
+  logo: "https://www.driveelevated.com/images/logo-transparent.png",
   description:
     "Drive Elevated provides premium vehicle rentals, detailed guest support, and curated Northern California driving experiences from Sacramento.",
   areaServed: [
@@ -26,7 +27,7 @@ const organizationJsonLd = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://driveelevated.com"),
+  metadataBase: new URL("https://www.driveelevated.com"),
 
   title: {
     default:
@@ -64,7 +65,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://driveelevated.com",
+    url: "https://www.driveelevated.com",
     siteName: "Drive Elevated",
     title:
       "Drive Elevated | Premium Vehicle Rentals & Northern California Journeys",
@@ -112,14 +113,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-  <script
-    type="application/ld+json"
-    dangerouslySetInnerHTML={{
-      __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
-    }}
-  />
-  {children}
-</body>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationJsonLd).replace(
+              /</g,
+              "\\u003c"
+            ),
+          }}
+        />
+
+        {children}
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-P32DWHVWBG"
+          strategy="afterInteractive"
+        />
+
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-P32DWHVWBG');
+          `}
+        </Script>
+      </body>
     </html>
   );
 }

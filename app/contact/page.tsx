@@ -28,7 +28,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://driveelevated.com/contact",
+    url: "https://www.driveelevated.com/contact",
     title: "Contact Drive Elevated",
     description:
       "Questions before booking or during your trip? We're here to help make your Drive Elevated experience exceptional.",

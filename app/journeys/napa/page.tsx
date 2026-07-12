@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "article",
-    url: "https://driveelevated.com/journeys/napa",
+    url: "https://www.driveelevated.com/journeys/napa",
     title: "Journey 001: The Drive from Sacramento to Napa Valley",
     description:
       "A curated Sacramento-to-Napa journey featuring coffee, wetlands, Davis, Silverado Trail, scenic roads, and memorable wine-country stops.",
@@ -57,16 +57,16 @@ const journeyJsonLd = {
   "@graph": [
     {
       "@type": "Article",
-      "@id": "https://driveelevated.com/journeys/napa#article",
+      "@id": "https://www.driveelevated.com/journeys/napa#article",
       headline: "The Drive from Sacramento to Napa Valley",
       description:
         "A curated Sacramento-to-Napa journey featuring Temple Coffee, the Yolo Causeway, Davis, Silverado Trail, scenic roads, and memorable wine-country stops.",
       image: [
-        "https://driveelevated.com/images/napa-corvette.jpeg",
+        "https://www.driveelevated.com/images/napa-corvette.jpeg",
       ],
       mainEntityOfPage: {
         "@type": "WebPage",
-        "@id": "https://driveelevated.com/journeys/napa",
+        "@id": "https://www.driveelevated.com/journeys/napa",
       },
       author: {
         "@type": "Person",
@@ -74,11 +74,11 @@ const journeyJsonLd = {
       },
       publisher: {
         "@type": "Organization",
-        "@id": "https://driveelevated.com/#organization",
+        "@id": "https://www.driveelevated.com/#organization",
         name: "Drive Elevated",
         logo: {
           "@type": "ImageObject",
-          url: "https://driveelevated.com/images/logo-transparent.png",
+          url: "https://www.driveelevated.com/images/logo-transparent.png",
         },
       },
       about: [
@@ -98,25 +98,25 @@ const journeyJsonLd = {
     },
     {
       "@type": "BreadcrumbList",
-      "@id": "https://driveelevated.com/journeys/napa#breadcrumb",
+      "@id": "https://www.driveelevated.com/journeys/napa#breadcrumb",
       itemListElement: [
         {
           "@type": "ListItem",
           position: 1,
           name: "Home",
-          item: "https://driveelevated.com",
+          item: "https://www.driveelevated.com",
         },
         {
           "@type": "ListItem",
           position: 2,
           name: "Journeys",
-          item: "https://driveelevated.com/journeys/napa",
+          item: "https://www.driveelevated.com/journeys/napa",
         },
         {
           "@type": "ListItem",
           position: 3,
           name: "Napa Valley",
-          item: "https://driveelevated.com/journeys/napa",
+          item: "https://www.driveelevated.com/journeys/napa",
         },
       ],
     },

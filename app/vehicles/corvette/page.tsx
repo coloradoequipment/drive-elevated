@@ -42,7 +42,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://driveelevated.com/vehicles/corvette",
+    url: "https://www.driveelevated.com/vehicles/corvette",
     title: "2025 Corvette Stingray Convertible | Drive Elevated",
     description:
       "Open-air performance, detailed guest support, luggage guidance, and Sacramento airport delivery for an unforgettable Northern California drive.",
@@ -68,25 +68,25 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "@id": "https://driveelevated.com/vehicles/corvette#breadcrumb",
+  "@id": "https://www.driveelevated.com/vehicles/corvette#breadcrumb",
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://driveelevated.com",
+      item: "https://www.driveelevated.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Vehicles",
-      item: "https://driveelevated.com/#vehicles",
+      item: "https://www.driveelevated.com/#vehicles",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Corvette Convertible",
-      item: "https://driveelevated.com/vehicles/corvette",
+      item: "https://www.driveelevated.com/vehicles/corvette",
     },
   ],
 };

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://driveelevated.com/pickup",
+    url: "https://www.driveelevated.com/pickup",
     title: "SMF Arrival & Departure Concierge | Drive Elevated",
     description:
       "Know exactly what to expect when picking up or returning your Drive Elevated vehicle at Sacramento International Airport or our Roseville location.",

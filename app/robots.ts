@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://driveelevated.com/sitemap.xml",
+    sitemap: "https://www.driveelevated.com/sitemap.xml",
   };
 }

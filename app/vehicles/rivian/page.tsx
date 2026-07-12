@@ -43,7 +43,7 @@ export const metadata: Metadata = {
 
   openGraph: {
     type: "website",
-    url: "https://driveelevated.com/vehicles/rivian",
+    url: "https://www.driveelevated.com/vehicles/rivian",
     title: "Rivian R1S Adventure | Drive Elevated",
     description:
       "Luxury electric adventure with detailed charging guidance, cargo planning, family travel support, and Sacramento airport delivery.",
@@ -69,25 +69,25 @@ export const metadata: Metadata = {
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",
   "@type": "BreadcrumbList",
-  "@id": "https://driveelevated.com/vehicles/rivian#breadcrumb",
+  "@id": "https://www.driveelevated.com/vehicles/rivian#breadcrumb",
   itemListElement: [
     {
       "@type": "ListItem",
       position: 1,
       name: "Home",
-      item: "https://driveelevated.com",
+      item: "https://www.driveelevated.com",
     },
     {
       "@type": "ListItem",
       position: 2,
       name: "Vehicles",
-      item: "https://driveelevated.com/#vehicles",
+      item: "https://www.driveelevated.com/#vehicles",
     },
     {
       "@type": "ListItem",
       position: 3,
       name: "Rivian R1S Adventure",
-      item: "https://driveelevated.com/vehicles/rivian",
+      item: "https://www.driveelevated.com/vehicles/rivian",
     },
   ],
 };
