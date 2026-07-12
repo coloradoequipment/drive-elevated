@@ -52,6 +52,77 @@ export const metadata: Metadata = {
   },
 };
 
+const journeyJsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "@id": "https://driveelevated.com/journeys/napa#article",
+      headline: "The Drive from Sacramento to Napa Valley",
+      description:
+        "A curated Sacramento-to-Napa journey featuring Temple Coffee, the Yolo Causeway, Davis, Silverado Trail, scenic roads, and memorable wine-country stops.",
+      image: [
+        "https://driveelevated.com/images/napa-corvette.jpeg",
+      ],
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://driveelevated.com/journeys/napa",
+      },
+      author: {
+        "@type": "Person",
+        name: "JR Cardoza",
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": "https://driveelevated.com/#organization",
+        name: "Drive Elevated",
+        logo: {
+          "@type": "ImageObject",
+          url: "https://driveelevated.com/images/logo-transparent.png",
+        },
+      },
+      about: [
+        {
+          "@type": "Place",
+          name: "Napa Valley",
+        },
+        {
+          "@type": "Place",
+          name: "Sacramento",
+        },
+        {
+          "@type": "Thing",
+          name: "Scenic driving",
+        },
+      ],
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://driveelevated.com/journeys/napa#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://driveelevated.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Journeys",
+          item: "https://driveelevated.com/journeys/napa",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Napa Valley",
+          item: "https://driveelevated.com/journeys/napa",
+        },
+      ],
+    },
+  ],
+};
+
 const curatedStops = [
   {
     label: "Arriving Before Check-In",
@@ -152,7 +223,7 @@ export default function NapaJourneyPage() {
   return (
     <main className="min-h-screen bg-[#020407] text-white">
       <Navbar />
-
+      
       <JourneyHero
         number="001"
         title="Napa Valley"

@@ -66,6 +66,32 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://driveelevated.com/vehicles/rivian#breadcrumb",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://driveelevated.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Vehicles",
+      item: "https://driveelevated.com/#vehicles",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "Rivian R1S Adventure",
+      item: "https://driveelevated.com/vehicles/rivian",
+    },
+  ],
+};
+
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 
 const quickStart = [
@@ -138,6 +164,12 @@ const fiveThings = [
 export default function RivianPage() {
   return (
     <main className="min-h-screen bg-[#020407] text-white">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+  }}
+/>
       <Navbar />
 
       <PageHero

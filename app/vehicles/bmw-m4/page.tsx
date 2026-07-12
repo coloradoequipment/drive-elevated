@@ -65,6 +65,32 @@ export const metadata: Metadata = {
   },
 };
 
+const breadcrumbJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "@id": "https://driveelevated.com/vehicles/bmw-m4#breadcrumb",
+  itemListElement: [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Home",
+      item: "https://driveelevated.com",
+    },
+    {
+      "@type": "ListItem",
+      position: 2,
+      name: "Vehicles",
+      item: "https://driveelevated.com/#vehicles",
+    },
+    {
+      "@type": "ListItem",
+      position: 3,
+      name: "BMW M4 Convertible",
+      item: "https://driveelevated.com/vehicles/bmw-m4",
+    },
+  ],
+};
+
 const turoHostLink = "https://turo.com/us/en/host/20782143";
 
 const quickStart = [
@@ -137,6 +163,12 @@ const fiveThings = [
 export default function BMWPage() {
   return (
     <main className="min-h-screen bg-[#020407] text-white">
+      <script
+  type="application/ld+json"
+  dangerouslySetInnerHTML={{
+    __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+  }}
+/>
       <Navbar />
 
       <PageHero

@@ -1,6 +1,30 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://driveelevated.com/#organization",
+  name: "Drive Elevated",
+  url: "https://driveelevated.com",
+  logo: "https://driveelevated.com/images/logo-transparent.png",
+  description:
+    "Drive Elevated provides premium vehicle rentals, detailed guest support, and curated Northern California driving experiences from Sacramento.",
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Sacramento",
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Northern California",
+    },
+  ],
+  sameAs: [
+    "https://turo.com/us/en/host/20782143",
+  ],
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://driveelevated.com"),
 
@@ -87,7 +111,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+  <script
+    type="application/ld+json"
+    dangerouslySetInnerHTML={{
+      __html: JSON.stringify(organizationJsonLd).replace(/</g, "\\u003c"),
+    }}
+  />
+  {children}
+</body>
     </html>
   );
 }
