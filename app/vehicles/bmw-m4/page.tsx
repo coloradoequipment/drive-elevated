@@ -65,28 +65,71 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbJsonLd = {
+const vehiclePageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.driveelevated.com/vehicles/bmw-m4#breadcrumb",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.driveelevated.com",
+      "@type": "Car",
+      "@id": "https://www.driveelevated.com/vehicles/bmw-m4#vehicle",
+      name: "2022 BMW M4 Competition Convertible xDrive",
+      url: "https://www.driveelevated.com/vehicles/bmw-m4",
+      description:
+        "A 2022 BMW M4 Competition Convertible xDrive offered through Drive Elevated for luxury touring and premium Northern California driving experiences.",
+      image: [
+        "https://www.driveelevated.com/images/bmw/gallery/01.jpeg",
+      ],
+      brand: {
+        "@type": "Brand",
+        name: "BMW",
+      },
+      manufacturer: {
+        "@type": "Organization",
+        name: "BMW",
+      },
+      model: "M4 Competition Convertible xDrive",
+      vehicleModelDate: "2022",
+      vehicleConfiguration: "Competition Convertible xDrive",
+      bodyType: "Convertible",
+      color: "Brooklyn Grey Metallic",
+      fuelType: "Gasoline",
+      vehicleTransmission: "8-speed automatic",
+      driveWheelConfiguration:
+        "https://schema.org/AllWheelDriveConfiguration",
+      seatingCapacity: 4,
+      vehicleSpecialUsage: "Commercial rental",
+      provider: {
+        "@type": "Organization",
+        "@id": "https://www.driveelevated.com/#organization",
+        name: "Drive Elevated",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://www.driveelevated.com/vehicles/bmw-m4",
+      },
     },
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Vehicles",
-      item: "https://www.driveelevated.com/#vehicles",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "BMW M4 Convertible",
-      item: "https://www.driveelevated.com/vehicles/bmw-m4",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.driveelevated.com/vehicles/bmw-m4#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.driveelevated.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Vehicles",
+          item: "https://www.driveelevated.com/#vehicles",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "BMW M4 Convertible",
+          item: "https://www.driveelevated.com/vehicles/bmw-m4",
+        },
+      ],
     },
   ],
 };
@@ -166,7 +209,7 @@ export default function BMWPage() {
       <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
-    __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+    __html: JSON.stringify(vehiclePageJsonLd).replace(/</g, "\\u003c"),
   }}
 />
       <Navbar />

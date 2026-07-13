@@ -66,28 +66,72 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbJsonLd = {
+const vehiclePageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.driveelevated.com/vehicles/rivian#breadcrumb",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.driveelevated.com",
+      "@type": "Car",
+      "@id": "https://www.driveelevated.com/vehicles/rivian#vehicle",
+      name: "2023 Rivian R1S Adventure Quad Motor",
+      url: "https://www.driveelevated.com/vehicles/rivian",
+      description:
+        "A 2023 Rivian R1S Adventure Quad Motor offered through Drive Elevated for family travel, Lake Tahoe trips, and electric Northern California adventures.",
+      image: [
+        "https://www.driveelevated.com/images/rivian/gallery/01.jpeg",
+      ],
+      brand: {
+        "@type": "Brand",
+        name: "Rivian",
+      },
+      manufacturer: {
+        "@type": "Organization",
+        name: "Rivian",
+      },
+      model: "R1S",
+      vehicleModelDate: "2023",
+      vehicleConfiguration:
+        "Adventure Quad Motor with Large Battery Pack",
+      bodyType: "Sport Utility Vehicle",
+      color: "Rivian Blue",
+      fuelType: "Electric",
+      vehicleTransmission: "Single-speed electric drivetrain",
+      driveWheelConfiguration:
+        "https://schema.org/AllWheelDriveConfiguration",
+      seatingCapacity: 7,
+      vehicleSpecialUsage: "Commercial rental",
+      provider: {
+        "@type": "Organization",
+        "@id": "https://www.driveelevated.com/#organization",
+        name: "Drive Elevated",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://www.driveelevated.com/vehicles/rivian",
+      },
     },
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Vehicles",
-      item: "https://www.driveelevated.com/#vehicles",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Rivian R1S Adventure",
-      item: "https://www.driveelevated.com/vehicles/rivian",
+      "@type": "BreadcrumbList",
+      "@id": "https://www.driveelevated.com/vehicles/rivian#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.driveelevated.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Vehicles",
+          item: "https://www.driveelevated.com/#vehicles",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Rivian R1S Adventure",
+          item: "https://www.driveelevated.com/vehicles/rivian",
+        },
+      ],
     },
   ],
 };
@@ -167,7 +211,7 @@ export default function RivianPage() {
       <script
   type="application/ld+json"
   dangerouslySetInnerHTML={{
-    __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+    __html: JSON.stringify(vehiclePageJsonLd).replace(/</g, "\\u003c"),
   }}
 />
       <Navbar />

@@ -65,28 +65,72 @@ export const metadata: Metadata = {
   },
 };
 
-const breadcrumbJsonLd = {
+const vehiclePageJsonLd = {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "@id": "https://www.driveelevated.com/vehicles/corvette#breadcrumb",
-  itemListElement: [
+  "@graph": [
     {
-      "@type": "ListItem",
-      position: 1,
-      name: "Home",
-      item: "https://www.driveelevated.com",
+      "@type": "Car",
+      "@id": "https://www.driveelevated.com/vehicles/corvette#vehicle",
+      name: "2025 Chevrolet Corvette Stingray Convertible",
+      url: "https://www.driveelevated.com/vehicles/corvette",
+      description:
+        "A 2025 Chevrolet Corvette Stingray Convertible offered through Drive Elevated for premium driving experiences in Sacramento and Northern California.",
+      image: [
+        "https://www.driveelevated.com/images/corvette/gallery/01.jpeg",
+      ],
+      brand: {
+        "@type": "Brand",
+        name: "Chevrolet",
+      },
+      manufacturer: {
+        "@type": "Organization",
+        name: "Chevrolet",
+      },
+      model: "Corvette Stingray Convertible",
+      vehicleModelDate: "2025",
+      vehicleConfiguration: "1LT Convertible",
+      bodyType: "Convertible",
+      color: "Hysteria Purple",
+      fuelType: "Gasoline",
+      vehicleTransmission: "8-speed dual-clutch automatic",
+      driveWheelConfiguration:
+        "https://schema.org/RearWheelDriveConfiguration",
+      seatingCapacity: 2,
+      vehicleSpecialUsage: "Commercial rental",
+      provider: {
+        "@type": "Organization",
+        "@id": "https://www.driveelevated.com/#organization",
+        name: "Drive Elevated",
+      },
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": "https://www.driveelevated.com/vehicles/corvette",
+      },
     },
     {
-      "@type": "ListItem",
-      position: 2,
-      name: "Vehicles",
-      item: "https://www.driveelevated.com/#vehicles",
-    },
-    {
-      "@type": "ListItem",
-      position: 3,
-      name: "Corvette Convertible",
-      item: "https://www.driveelevated.com/vehicles/corvette",
+      "@type": "BreadcrumbList",
+      "@id":
+        "https://www.driveelevated.com/vehicles/corvette#breadcrumb",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.driveelevated.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Vehicles",
+          item: "https://www.driveelevated.com/#vehicles",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Corvette Convertible",
+          item: "https://www.driveelevated.com/vehicles/corvette",
+        },
+      ],
     },
   ],
 };
@@ -166,7 +210,7 @@ export default function CorvettePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbJsonLd).replace(/</g, "\\u003c"),
+         __html: JSON.stringify(vehiclePageJsonLd).replace(/</g, "\\u003c"),
         }}
       />
 
